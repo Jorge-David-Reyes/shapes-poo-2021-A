@@ -2,21 +2,25 @@ package uaslp.ingenieria.labs.shapes.triangles;
 
 import uaslp.ingenieria.labs.shapes.Triangle;
 
-public class TriangleEquilatero extends Triangle {
-    private int side;
+public class ScaleneTriangle extends Triangle {
+    private int sideonebase;
+    private int sidetwo;
+    private int sidethree;
     private float height;
     private int sidesCount = 3;
     private float perimeter;
     private double area;
 
-    public TriangleEquilatero(int side, float height) {
+    public ScaleneTriangle(int sideonebase, int sidetwo, int sidethree, float height) {
 
-        this.side = side;
+        this.sideonebase = sideonebase;
+        this.sidetwo = sidetwo;
+        this.sidethree=sidethree;
         this.height=height;
     }
 
     public String getName() {
-        return "TriangleEquilatero";
+        return "ScaleneTriangle";
     }
 
     public int getSidesCount() {
@@ -24,12 +28,12 @@ public class TriangleEquilatero extends Triangle {
     }
 
     public float getPerimeter() {
-        perimeter=side * 3;
+        perimeter=sideonebase+sidetwo+sidethree;
         return perimeter;
     }
 
     public double getArea() {
-        area=(side*height)/2;
+        area=(sideonebase*height)/2;
         return area;
     }
 }

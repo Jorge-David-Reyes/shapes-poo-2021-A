@@ -6,6 +6,9 @@ public class Rectangle extends Shape {
 
     private int base;
     private int height;
+    private int sidesCount = 4;
+    private float perimeter;
+    private double area;
 
     public Rectangle(int base, int height) {
         this.base = base;
@@ -14,5 +17,19 @@ public class Rectangle extends Shape {
 
     public String getName() {
         return "Rectangle";
+    }
+
+    public int getSidesCount() {
+        return sidesCount;
+    }
+
+    public float getPerimeter() {
+        perimeter=base*2+height*2;
+        return perimeter;
+    }
+
+    public double getArea() {
+        area=base*height;
+        return area;
     }
 }

@@ -2,21 +2,23 @@ package uaslp.ingenieria.labs.shapes.triangles;
 
 import uaslp.ingenieria.labs.shapes.Triangle;
 
-public class TriangleEquilatero extends Triangle {
-    private int side;
+public class IsoscelesTriangle extends Triangle {
+    private int equalSides;
+    private int minorSideBase;
     private float height;
     private int sidesCount = 3;
     private float perimeter;
     private double area;
 
-    public TriangleEquilatero(int side, float height) {
+    public IsoscelesTriangle(int equalSides, int minorSideBase, float height) {
 
-        this.side = side;
+        this.equalSides = equalSides;
+        this.minorSideBase=minorSideBase;
         this.height=height;
     }
 
     public String getName() {
-        return "TriangleEquilatero";
+        return "IsoscelesTriangle";
     }
 
     public int getSidesCount() {
@@ -24,12 +26,12 @@ public class TriangleEquilatero extends Triangle {
     }
 
     public float getPerimeter() {
-        perimeter=side * 3;
+        perimeter=equalSides*2+minorSideBase;
         return perimeter;
     }
 
     public double getArea() {
-        area=(side*height)/2;
+        area=(minorSideBase*height)/2;
         return area;
     }
 }

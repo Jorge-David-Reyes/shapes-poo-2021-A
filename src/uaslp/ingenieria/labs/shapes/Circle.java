@@ -3,7 +3,11 @@ package uaslp.ingenieria.labs.shapes;
 import uaslp.ingenieria.labs.Shape;
 
 public class Circle extends Shape {
-    private int radio;
+    private float radio=5;
+    private int sidesCount=0;
+    private float perimeter;
+    private double area;
+
 
     public Circle(int radio) {
         this.radio = radio;
@@ -18,7 +22,17 @@ public class Circle extends Shape {
         return "Circle";
     }
 
-    public int getRadio() {
-        return radio;
+    public int getSidesCount() {
+        return sidesCount;
+    }
+
+    public float getPerimeter() {
+        perimeter= (float) (2*Math.PI*radio);
+        return perimeter;
+    }
+
+    public double getArea() {
+        area= (float) (Math.PI*Math.pow(radio, 2));
+        return area;
     }
 }
